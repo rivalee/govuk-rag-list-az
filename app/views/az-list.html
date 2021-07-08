@@ -1,0 +1,203 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Red, amber and green list rules for entering England
+        </h1>
+
+        <p class="govuk-body-m">Countries rated as red, amber or green for Coronavirus (COVID-19) and the rules you must follow to enter England.</p>
+
+<!-- Search input that filters the country list -->
+
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
+              Start typing a country
+            </label>
+          </h1>
+          <input class="govuk-input" id="event-name" name="event-name" type="text">
+        </div>
+
+        </div>
+
+        <div class="govuk-width-container">
+          <main class="govuk-main-wrapper">
+
+      <!-- List of countries -->
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+          <div class="letter-category">
+          <h1 class="govuk-heading-xl">A</h1>
+          <ul class="govuk-body-m country-list">
+          <li><a href="#">Afghanistan</a> </br><span class="govuk-body-s">Moved to the red list 4am Wednesday 30 June. If you arrived in England before then, you need to follow the amber list rules.</span>
+          <span class="red-list govuk-tag--red">Red</span></li>
+          <li><a href="#">Algeria</a> <span class="govuk-body-s amber-list">Amber</span></li>
+          <li><a href="#">Angola</a> <span class="red-list govuk-tag--red">Red</span></li>
+          <li><a href="#">Antarctica/British Antarctic Territory</a> <span class="govuk-body-s green-list">Green</span></li>
+          <li><a href="#">Armenia</a> <span class="govuk-body-s amber-list">Amber</span></li>
+          <li><a href="#">Australia</a> <span class="govuk-body-s green-list">Green</span></li>
+          <li><a href="#">Azerbaijan</a> <span class="govuk-body-s green-list">Green</span></li>
+          <li><a href="#">Albania</a> <span class="govuk-body-s amber-list">Amber</span></li>
+          <li><a href="#">Andorrá</a> <span class="govuk-body-s amber-list">Amber</span></li>
+          <li><a href="#">Anguilla</a> <span class="govuk-body-s green-list">Green</span></li>
+          <li><a href="#">Antigua and Barbuda</a> <span class="govuk-body-s green-list">Green</span></li>
+          <li><a href="#">Argentina</a> <span class="red-list govuk-tag--red">Red</span></li>
+          <li><a href="#">Aruba</a> <span class="govuk-body-s amber-list">Amber</span></li>
+          <li><a href="#">Austria</a> <span class="govuk-body-s amber-list">Amber</span></li>
+          </ul>
+          </div>
+
+
+          <div class="letter-category">
+          <h1 class="govuk-heading-xl">B</h1>
+          <ul class="govuk-body-m country-list">
+            <li><a href="#">Bahamas</a></li>
+          </ul>
+          </div>
+
+          <div class="letter-category">
+          <h1 class="govuk-heading-xl">C</h1>
+          <ul class="govuk-body-m country-list">
+            <li><a href="#">Cambodia</a></li>
+          </ul>
+        </div>
+
+          <div class="letter-category">
+          <h1 class="govuk-heading-xl">D</h1>
+          <ul class="govuk-body-m country-list">
+            <li><a href="#">Democratic Republic of the Congo</a></li>
+          </ul>
+        </div>
+
+          <div class="letter-category">
+          <h1 class="govuk-heading-xl">E</h1>
+          <ul class="govuk-body-m country-list">
+            <li><a href="#">Ecuador</a></li>
+          </ul>
+        </div>
+
+          <div class="letter-category">
+          <h1 class="govuk-heading-xl">F</h1>
+          <ul class="govuk-body-m country-list">
+            <li><a href="#">Falkland Islands</a></li>
+          </ul>
+        </div>
+
+          <div class="letter-category">
+          <h1 class="govuk-heading-xl">G</h1>
+          <ul class="govuk-body-m country-list">
+            <li><a href="#">Gabon</a></li>
+          </ul>
+        </div>
+
+          <div class="letter-category">
+          <h1 class="govuk-heading-xl">H</h1>
+          <ul class="govuk-body-m country-list">
+            <li><a href="#">Haiti</a></li>
+          </ul>
+        </div>
+
+          <div class="letter-category">
+          <h1 class="govuk-heading-xl">I</h1>
+          <ul class="govuk-body-m country-list">
+            <li><a href="#">Iceland</a></li>
+        </ul>
+      </div>
+
+        <div class="letter-category">
+          <h1 class="govuk-heading-xl">J</h1>
+          <ul class="govuk-body-m country-list">
+            <li><a href="#">Jamaica</a></li>
+        </ul>
+      </div>
+
+        <div class="letter-category">
+          <h1 class="govuk-heading-xl">K</h1>
+          <ul class="govuk-body-m country-list">
+            <li><a href="#">Kazakhstan</a></li>
+        </ul>
+      </div>
+
+        <div class="letter-category">
+          <h1 class="govuk-heading-xl">L</h1>
+          <ul class="govuk-body-m country-list">
+            <li><a href="#">Laos</a></li>
+        </ul>
+      </div>
+
+        <div class="letter-category">
+          <h1 class="govuk-heading-xl">M</h1>
+          <ul class="govuk-body-m country-list">
+            <li><a href="#">Macao</a></li>
+          </ul>
+        </div>
+
+          <div class="letter-category">
+          <h1 class="govuk-heading-xl">N</h1>
+          <ul class="govuk-body-m country-list">
+            <li><a href="#">Namibia</a></li>
+          </ul>
+        </div>
+
+          <div class="letter-category">
+          <h1 class="govuk-heading-xl">O</h1>
+          <ul class="govuk-body-m country-list">
+            <li><a href="#">Oman</a></li>
+          </ul>
+        </div>
+
+          <div class="letter-category">
+          <h1 class="govuk-heading-xl">P</h1>
+          <ul class="govuk-body-m country-list">
+            <li><a href="#">Pakistan</a></li>
+          </ul>
+        </div>
+
+          <div class="letter-category">
+          <h1 class="govuk-heading-xl">P</h1>
+          <ul class="govuk-body-m country-list">
+            <li><a href="#">Qatar</a></li>
+          </ul>
+        </div>
+
+          <div class="letter-category">
+          <h1 class="govuk-heading-xl">R</h1>
+          <ul class="govuk-body-m country-list">
+            <li><a href="#">Reunion</a></li>
+          </ul>
+        </div>
+
+          <div class="letter-category">
+          <h1 class="govuk-heading-xl">S</h1>
+          <ul class="govuk-body-m country-list">
+            <li><a href="#">Samoa</a></li>
+          </ul>
+        </div>
+
+          <div class="letter-category">
+          <h1 class="govuk-heading-xl">T</h1>
+          <ul class="govuk-body-m country-list">
+            <li><a href="#">Taiwan</a></li>
+          </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+
+    </div>
+  </div>
+
+{% endblock %}

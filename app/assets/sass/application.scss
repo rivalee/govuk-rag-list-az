@@ -15,4 +15,66 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/task-list";
 @import "patterns/related-items";
 
+.country-list {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.country-list li {
+  padding: 10px 0px 10px 0;
+  border-bottom: 1px solid $govuk-border-colour;
+}
+
+.red-list {
+  float: right;
+  background: red;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  padding-top: 5px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    font-size: 14px;
+}
+
+.green-list {
+  float: right;
+  background: green;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  padding-top: 5px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    font-size: 14px;
+}
+
+.amber-list {
+  float: right;
+  background: orange;
+  text-transform: uppercase;
+  color: white;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  padding-top: 5px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    font-size: 14px;
+}
+
+.letter-category {
+  margin-bottom: 4em;
+}
+
+.country-search {
+  width: 50%;
+}
+
+
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
