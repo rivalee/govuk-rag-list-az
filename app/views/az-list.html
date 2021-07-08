@@ -15,6 +15,40 @@
 
         <p class="govuk-body-m">Countries rated as red, amber or green for Coronavirus (COVID-19) and the rules you must follow to enter England.</p>
 
+
+<!-- Checkboxes to filter the list -->
+
+<div class="filter-countries">
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="fitering-hint">
+      <h3 class="govuk-heading-m">
+        Show:
+      </h3>
+
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="red">
+        <label class="govuk-label govuk-checkboxes__label" for="filtering">
+          Red countries
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="amber">
+        <label class="govuk-label govuk-checkboxes__label" for="filtering-2">
+          Amber countries
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="green">
+        <label class="govuk-label govuk-checkboxes__label" for="filtering-3">
+          Green countries
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+</div>
 <!-- Search input that filters the country list -->
 
         <div class="govuk-form-group">
