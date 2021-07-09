@@ -27,20 +27,20 @@
 
     <div class="govuk-checkboxes" data-module="govuk-checkboxes">
       <div class="govuk-checkboxes__item">
-        <input checked class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="red">
-        <label class="govuk-label govuk-checkboxes__label" for="filtering">
+        <input checked class="govuk-checkboxes__input" id="rag-red" name="waste" type="checkbox" value="red">
+        <label class="govuk-label govuk-checkboxes__label" for="rag-red">
           Red countries
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input checked class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="amber">
-        <label class="govuk-label govuk-checkboxes__label" for="filtering-2">
+        <input checked class="govuk-checkboxes__input" id="rag-amber" name="waste" type="checkbox" value="amber">
+        <label class="govuk-label govuk-checkboxes__label" for="rag-amber">
           Amber countries
         </label>
       </div>
       <div class="govuk-checkboxes__item">
-        <input checked class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="green">
-        <label class="govuk-label govuk-checkboxes__label" for="filtering-3">
+        <input checked class="govuk-checkboxes__input" id="rag-green" name="waste" type="checkbox" value="green">
+        <label class="govuk-label govuk-checkboxes__label" for="rag-green">
           Green countries
         </label>
       </div>
@@ -52,11 +52,11 @@
 <!-- Search input that filters the country list -->
 
         <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
+          <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="country-input">
               Start typing a country
             </label>
           </h1>
-          <input class="govuk-input" id="event-name" name="event-name" type="text">
+          <input class="govuk-input" id="country-input" name="event-name" type="text">
         </div>
 
         </div>
@@ -67,7 +67,7 @@
       <!-- List of countries -->
 
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
+        <div class="govuk-grid-column-full country-container">
 
           <div class="letter-category">
           <h1 class="govuk-heading-xl">A</h1>
@@ -249,6 +249,9 @@
           </ul>
           </div>
 
+          <div class="no-country-results" style="display: none">
+            <p class="govuk-body">No world locations match that filter.</p>
+          </div>
         </div>
       </div>
 
@@ -259,4 +262,66 @@
     </div>
   </div>
 
+<script>
+document.getElementById('country-input').addEventListener('input', filterLocations)
+document.getElementById('rag-red').addEventListener('change', filterLocations)
+document.getElementById('rag-amber').addEventListener('change', filterLocations)
+document.getElementById('rag-green').addEventListener('change', filterLocations)
+
+function filterLocations() {
+  var showingAny = false
+  var filter = document.getElementById('country-input').value.trim()
+  var showingRed = document.getElementById('rag-red').checked
+  var showingAmber = document.getElementById('rag-amber').checked
+  var showingGreen = document.getElementById('rag-green').checked
+
+  document.querySelectorAll('.country-container .country-list').forEach(function (countryList) {
+    var showingLetter = false
+
+    // loop through all of the items in the list, each should represent a country
+    countryList.querySelectorAll('li').forEach(function (countryListItem) {
+      var show = true
+
+      // don't show the country if they don't match the selected rag status
+      if (
+        (countryListItem.querySelector('.red-list') && !showingRed) ||
+        (countryListItem.querySelector('.amber-list') && !showingAmber) ||
+        (countryListItem.querySelector('.green-list') && !showingGreen)
+      ) {
+        show = false
+      }
+
+      // if a filter is set check whether it matches a particular country's name
+      if (filter !== '') {
+        var currentName = countryListItem.querySelector('a').textContent
+        var normalisedName = currentName.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase()
+        console.log(normalisedName)
+
+        if (!currentName.includes(filter) && !normalisedName.includes(filter.toLowerCase())) {
+          show = false
+        }
+      }
+
+      // if we're showing one country in a group then we want to show the whole letter section
+      if (show) {
+        showingLetter = true
+        countryListItem.style.display = ''
+      } else {
+        countryListItem.style.display = 'none'
+      }
+    })
+
+    if (showingLetter) {
+      showingAny = true
+      countryList.parentNode.style.display = ''
+    } else {
+      countryList.parentNode.style.display = 'none'
+    }
+  })
+
+  // show a no results message if we've found nothing.
+  document.querySelector(".no-country-results").style.display = showingAny ? 'none' : ''
+}
+
+</script>
 {% endblock %}
