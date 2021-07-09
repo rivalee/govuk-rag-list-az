@@ -80,5 +80,8 @@ $govuk-assets-path: '/govuk/assets/';
   padding-bottom: 30px;
 }
 
+.govuk-header__content {
+  visibility: hidden;
+}
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
