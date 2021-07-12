@@ -91,4 +91,25 @@ $govuk-assets-path: '/govuk/assets/';
   margin-bottom: 20px;
 }
 
+
+//  Styling for v2 //
+
+.red-category, .amber-category, .green-category {
+  margin-top: 3em;
+}
+
+.red-category {
+  border-left: 10px solid red;
+  padding: 20px;
+}
+
+.amber-category {
+  border-left: 10px solid orange;
+  padding: 20px;
+}
+
+.green-category {
+  border-left: 10px solid green;
+  padding: 20px;
+}
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you

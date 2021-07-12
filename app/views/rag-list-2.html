@@ -17,7 +17,7 @@
           Countries and territories are listed as either red, amber or green. The rules for testing and quarantine when you return to England are different for each list.
           </p><p class="govuk-body-m">Find out which list a country is on and the rules you must follow to enter England.</p>
 
-<!-- Checkboxes to filter the list -->
+<!-- Checkboxes to filter the list
 
 <div class="filter-countries">
 <div class="govuk-form-group">
@@ -30,19 +30,19 @@
       <div class="govuk-checkboxes__item">
         <input checked class="govuk-checkboxes__input" id="rag-red" name="waste" type="checkbox" value="red">
         <label class="govuk-label govuk-checkboxes__label" for="rag-red">
-          Red
+          Red countries
         </label>
       </div>
       <div class="govuk-checkboxes__item">
         <input checked class="govuk-checkboxes__input" id="rag-amber" name="waste" type="checkbox" value="amber">
         <label class="govuk-label govuk-checkboxes__label" for="rag-amber">
-          Amber
+          Amber countries
         </label>
       </div>
       <div class="govuk-checkboxes__item">
         <input checked class="govuk-checkboxes__input" id="rag-green" name="waste" type="checkbox" value="green">
         <label class="govuk-label govuk-checkboxes__label" for="rag-green">
-          Green 
+          Green countries
         </label>
       </div>
     </div>
@@ -50,6 +50,7 @@
   </fieldset>
 </div>
 </div>
+ -->
 <!-- Search input that filters the country list -->
 
         <div class="govuk-form-group">
@@ -70,51 +71,54 @@
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-full country-container">
 
-          <div class="letter-category">
-          <h1 class="govuk-heading-xl">A</h1>
+          <div class="red-category">
+          <h1 class="govuk-heading-l">Red</h1>
+          <p class="govuk-body-l"><a href="amber">View guidance for red countries</a></p>
           <ul class="govuk-body-m country-list">
-          <li><a href="#">Afghanistan</a> </br><span class="govuk-body-s">Moved to the red list 4am Wednesday 30 June. If you arrived in England before then, you need to follow the amber list rules.</span>
-          <span class="red-list govuk-tag--red">Red</span></li>
-          <li><a href="#">Algeria</a> <span class="govuk-body-s amber-list">Amber</span></li>
-          <li><a href="#">Angola</a> <span class="red-list govuk-tag--red">Red</span></li>
-          <li><a href="#">Antarctica/British Antarctic Territory</a> <span class="govuk-body-s green-list">Green</span></li>
-          <li><a href="#">Armenia</a> <span class="govuk-body-s amber-list">Amber</span></li>
-          <li><a href="#">Australia</a> <span class="govuk-body-s green-list">Green</span></li>
-          <li><a href="#">Azerbaijan</a> <span class="govuk-body-s green-list">Green</span></li>
-          <li><a href="#">Albania</a> <span class="govuk-body-s amber-list">Amber</span></li>
-          <li><a href="#">Andorrá</a> <span class="govuk-body-s amber-list">Amber</span></li>
-          <li><a href="#">Anguilla</a> <span class="govuk-body-s green-list">Green</span></li>
-          <li><a href="#">Antigua and Barbuda</a> <span class="govuk-body-s green-list">Green</span></li>
-          <li><a href="#">Argentina</a> <span class="red-list govuk-tag--red">Red</span></li>
-          <li><a href="#">Aruba</a> <span class="govuk-body-s amber-list">Amber</span></li>
-          <li><a href="#">Austria</a> <span class="govuk-body-s amber-list">Amber</span></li>
+          <li>Afghanistan </br><span class="govuk-body-s">Moved to the red list 4am Wednesday 30 June. If you arrived in England before then, you need to follow the amber list rules.</span>
+      </li>
+          <li>Angola</li>
+          <li>Argentina </li>
+          <li>Bangladesh</li>
+          <li>Bolivia</li>
+
           </ul>
           </div>
 
 
-          <div class="letter-category">
-          <h1 class="govuk-heading-xl">B</h1>
-          <ul class="govuk-body-m country-list">
-            <li><a href="#">Bahamas</a> <span class="govuk-body-s amber-list">Amber</span></li>
-            <li><a href="#">Bangladesh</a> <span class="govuk-body-s red-list">Red</span></li>
-            <li><a href="#">Belarus</a> <span class="govuk-body-s amber-list">Amber</span></li>
-            <li><a href="#">Belize</a> <span class="govuk-body-s amber-list">Amber</span></li>
-            <li><a href="#">Bermuda</a> <span class="govuk-body-s green-list">Green</span></li>
-            <li><a href="#">Bolivia</a> <span class="govuk-body-s red-list">Red</span></li>
+          <div class="amber-category">
+          <h1 class="govuk-heading-l">Amber</h1>
+          <p class="govuk-body-l"><a href="amber">View guidance for amber countries</a></p>
 
+          <ul class="govuk-body-m country-list">
+            <li>Algeria</li>
+            <li>Armenia</li>
+            <li> Albania</li>
+            <li> Andorrá</li>
+            <li> Aruba</li>
+            <li> Austria</li>
+            <li> Bahamas</li>
+            <li> Belarus</li>
+            <li> Belize</li>
+            <li> Cambodia</li>
+            <li> Canada</li>
           </ul>
           </div>
 
-          <div class="letter-category">
-          <h1 class="govuk-heading-xl">C</h1>
+          <div class="green-category">
+          <h1 class="govuk-heading-l">Green</h1>
+          <p class="govuk-body-l"><a href="#"> View guidance for these countries</a></p>
           <ul class="govuk-body-m country-list">
-            <li><a href="#">Cambodia</a> <span class="govuk-body-s amber-list">Amber</span></li>
-            <li><a href="#">Canada</a> <span class="govuk-body-s amber-list">Amber</span></li>
-            <li><a href="#">Cayman Islands</a> <span class="govuk-body-s green-list">Green</span></li>
-
+            <li>Antarctica/British Antarctic Territory</li>
+            <li>Australia</li>
+            <li>Azerbaijan</li>
+            <li>Anguilla</li>
+            <li>Antigua and Barbuda </li>
+            <li>Bermuda</li>
+            <li>Cayman Islands </li>
           </ul>
         </div>
-
+<!--
           <div class="letter-category">
           <h1 class="govuk-heading-xl">D</h1>
           <ul class="govuk-body-m country-list">
@@ -255,7 +259,7 @@
           </div>
         </div>
       </div>
-
+-->
     </main>
   </div>
 
