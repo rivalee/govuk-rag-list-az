@@ -94,9 +94,7 @@ $govuk-assets-path: '/govuk/assets/';
 
 //  Styling for v2 //
 
-.country-list-2 {
-  padding-top: 2em;
-}
+
 
 .red-category, .amber-category, .green-category {
   margin-top: 0.5em;
@@ -121,6 +119,27 @@ $govuk-assets-path: '/govuk/assets/';
 .contents {
   padding: 1em 0 2em 0;
 }
+
+
+.country-list-wrapper {
+  margin: 0 auto;
+  padding-top: 25px;
+}
+
+
+.country-count {
+  width: 30%;
+  float: left;
+}
+
+.country-list-2 {
+  width: 70%;
+  padding-top: 3.25em;
+  display: inline-block;
+}
+
+
+
 
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
